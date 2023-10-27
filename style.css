@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsla(204, 100%, 77%, 1);
+  background-color: hsla(204, 100%, 9%, 1);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(30px, 2.604vw, 50px);
+  margin-bottom: 30px;
+}
+
+ol {
+  background-color: rgb(8, 33, 79);
+  color: aliceblue;
+
+  width: clamp(200px, 15.625vw, 300px);
+  height: clamp(200px, 15.625vw, 300px);
+  margin-bottom: clamp(30px, 2.604vw, 50px);
+  padding: clamp(30px, 2.604vw, 50px);
+  border-radius: clamp(10px, 2.604vw, 50px);
+  border: clamp(4px, 0.417vw, 8px) solid blueviolet;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, clamp(300px, 26.042vw, 500px))
+  );
+  gap: clamp(30px, 2.604vw, 50px);
+}
+
+.card {
+  background-color: hsla(204, 100%, 15%, 1);
+  border-radius: 8px;
+  padding: 30px 20px;
+  line-height: 150%;
+  display: grid;
+  align-content: space-between;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100px;
+  margin: 0 auto 20px auto;
+}
+
+.tr {
+  margin-bottom: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  transform: translateX(clamp(30px, 15.625vw, 300px));
+}
+
+.poligon {
+  width: 500px;
+  height: 300px;
+  background-color: blueviolet;
+  margin-bottom: 50px;
+  clip-path: polygon(25% 0%, clamp(30px, 2.604vw, 50px) 0%, 75% 100%, 0% 100%);
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: 50px 50px;
+  gap: clamp(200px, (400px - 200 * ((100vw - 320px) / (1920 - 320))), 800px);
+  margin-bottom: 50px;
+}
+.block {
+  background-color: blueviolet;
+  height: 50px;
+}
